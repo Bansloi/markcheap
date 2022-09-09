@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<body id="fgg" style="background-image: url('{% static 'img/bgc.jpg' %}');">
+     
+</body> 
+<link rel="stylesheet" href="{% static 'css/forgot.css' %}">
+<div class="forgot">
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <h3>Forgot Your Password</h3>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="for">
+            <input type="email" placeholder="Email-Id" name="email" id="email">
+        </div>
+        <div class="for">
+            <button>
+                Send Reset Email
+            </button>
+        </div>
+        <div class="text2">
+            <a href="{% url 'login' %}">Login with existing account</a>
+        </div>
+
+    </form>
+    
+
+</div>
+
+
+
+
+
+
+{% endblock content %}

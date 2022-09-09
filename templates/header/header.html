@@ -1,0 +1,21 @@
+
+{% load static %}
+<header>
+    <link rel="stylesheet" href="{% static 'css/text.css' %}">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        &#9776;
+    </label>
+    <label title="Markcheap" class="logo">Markcheap</label>
+    <ul class="top"">
+      
+        <li><a class="active" href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><a href="{% url 'blog' %}">Blog</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+    </ul>
+
+
+  
+</header>

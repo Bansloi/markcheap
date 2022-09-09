@@ -1,0 +1,72 @@
+
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a free account | Markcheap</title>
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="bg" style="background-image: url('{% static 'img/bgc.jpg' %}');">
+    <div class="register">
+  
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <h3>Member Register</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="main">
+                <input type="text" placeholder="Name" id="name" name="name">
+            </div>
+            <div class="main">
+                <input type="email" placeholder="Email" id="email" name="email">
+            </div>
+            <div class="main">
+                <input type="password" placeholder="Password" id="password" name="password">
+            </div>
+            <div class="main">
+                <input type="password" placeholder="Confirm Password" id="password2" name="password2">
+            </div>
+            <div class="main">
+                <button>Register</button>
+            </div>
+            <div class="login">
+                <a class="a" href="{% url 'login' %}">Login with existing account </a>
+            </div>
+    
+        </form>
+       
+        
+       
+        
+    
+    </div>
+
+  
+    
+    
+    
+</body>
+</html>
+
+
+
+
+
+  
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,75 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Markcheap Blog</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    {% for category in categories %}
+    <!-- <div style="background-color: tomato; margin-left: 70%; padding: 20px;">
+        <h2><a href="/blog/category/{{ category.slug }}">{{category.id}} | {{category.name}}</a></h2>
+      
+    </div> -->
+
+    {% endfor %}
+     <section class="bg">
+       <div>    
+           <article class="blog-article clearfix">
+            {% for post in posts %}
+                <div class="blog-data">                   
+                    <h3>{{post.title}}</h3>
+                    <div class="admin">
+                        <div class="ab"><a style="color: burlywood;" href="">Admin</a></div>
+                        <div class="cd"><span> | {{post.published|timesince}} ago</span></div>
+                     
+                        <div class="ef"><a style="color: red; font-weight: 600; background-color: #08cc43; padding: 5px;"; href="">{{post.category}}</a></div>
+                        
+                        
+                     
+                        <div class="gh"><span> | No Comments</span></div>
+                    </div>
+                    <p class="para">{{post.content|safe|truncatechars:200}}</p>
+                    <span><a class="read" title="continue readaing" href="{% url 'detail' post.slug %}">Continue reading <l class="font">&#8594;</l></a></span>
+                    <br>
+                    <br>
+                </div>
+            {% endfor %}
+           </article>
+
+        </div>
+       
+   </section>
+   <div class="pagination">
+        <span class="step-links">
+            {% if post.has_previous %}
+                <a style="color: whitesmoke;" href="{% url 'blog' %}">&laquo; First</a>
+                <a style="color: lawngreen;" href="?page={{ post.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ post.number }} of {{ post.paginator.num_pages }}.
+            </span>
+
+            {% if post.has_next %}
+                <a style="color: whitesmoke;" href="?page={{ post.next_page_number }}">Next</a>
+                <a style="color: whitesmoke;" href="?page={{ post.paginator.num_pages }}">Last &raquo;</a>
+            {% endif %}
+        </span>
+   </div>
+
+
+    
+</body>
+</html>
+
+
+    
+{% endblock content %}

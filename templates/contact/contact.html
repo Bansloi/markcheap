@@ -1,0 +1,54 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Markcheap</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body id="bg" style="background-image: url('{% static 'img/bgc.jpg' %}');">
+    <div class="contactForm">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <h2>Say hello</h2>
+        <h3>we are always ready to serve you!</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="send">
+                <input type="text" placeholder="Full Name" name="name" id="name" >
+            </div>
+            <div class="send">
+                <input type="email" placeholder="Email-Id" name="email" id="email" >
+            </div>
+            <div class="send">
+                 <textarea name="content" id="area" placeholder="Message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="send">
+                <button>
+                    Send
+                </button>
+            </div>
+    
+        </form>
+    
+    </div>
+    
+    
+    
+</body>
+</html>
+
+
+
+
+{% endblock content %}
+

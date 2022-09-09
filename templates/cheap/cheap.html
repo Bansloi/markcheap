@@ -1,0 +1,188 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>markcheap</title>
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cheap.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">
+                        <span class="icon"><i class="fab fa-bandcamp"></i></span>
+                        <span class="title"><h2>Markcheap</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'cheap' %}">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a> 
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>  
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-question-circle"></i></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>  
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-lock"></i></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'home' %}">
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+               </li>             
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <h6 class="toggle" onclick="toggleMenu();">&#9776;</h6>
+                <div class="search">
+                    <label>
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search here">                    
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="{% static 'img/abc.jpg' %}" alt="img">
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,042</div>
+                        <div class="cardName">Daily view</div>
+
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-eye"></i>
+                    </div>                  
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Sales</div>
+
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">$9,042</div>
+                        <div class="cardName">Earning</div>
+
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                  
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">642</div>
+                        <div class="cardName">Comments</div>
+
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                   
+                </div>
+
+            </div>
+
+
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent Orders</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Amit kumar</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered ">Delivered</span></td>
+                            </tr>
+                        
+
+
+
+                            
+                        </tbody>
+                        
+                    </table>
+                </div>
+               
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>      
+                    </div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="60px" ><div class="imgBx"><img src="{% static 'img/abc.jpg' %}"></div></td>
+                                <td><h4>Mohit<br><span>India</span></h4></td>
+                            </tr>
+                         
+                        </tbody>
+                    </table>
+                </div>
+               
+
+            </div>
+
+
+        </div>
+    </div>  
+
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        
+        }
+    </script>
+</body>
+</html>

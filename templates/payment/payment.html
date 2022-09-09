@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: white;
+        }
+        .design{
+            text-align: center;
+            background-color: white;
+            width: 400px;
+            height: 500px;
+            margin-left: 30%;
+            box-shadow: 10px 10px 4px 4px rgb(0, 0, 0);
+            border-radius: 10px 10px;
+            border: 1px solid black;
+            
+        }
+        .design:hover{
+            background: linear-gradient(green,red);
+        }
+        h1{
+            text-shadow: 2px 2px  #ffee00 ;
+            padding-top: 100px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="design">
+        <caption><h1>Google Pay</h1></caption>
+        <h1>Payment Informations</h1>
+        <h2>Adsense Approval your website</h2>
+        <h3>Amount - 100</h3>
+        <a href="{% url 'register' %}">Order Now</a>
+    </div>
+
+
+    
+</body>
+</html>

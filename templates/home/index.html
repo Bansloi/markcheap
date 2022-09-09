@@ -1,0 +1,71 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Website | Software Development |...</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+   <section class="first-look">
+        <div class="bag">
+            <h1>Welcome to Markcheap.com - The Best Way To Buy Any Website And Everything Else You Need Our Total Members: {{count}}</h1>
+        </div> 
+        <div class="buy-site">
+            <h2>World's Biggest Software Development Website</h2>
+            <p>Markcheap is a high profile development Website our every members happy and buy website markcheap.com</p>
+            <a href="{% url 'blog' %}" class="visit">Visit Us To Know More</a>
+        </div>  
+   </section>   
+ 
+   <!-- ----- Order Now ----- -->
+   <section class="order">
+       <h1>Buy Website Now Special Offer</h1>
+       <p>Buy website 10% to 50% discount just order now and contact our support team.</p>
+
+       <div class="row">
+           <div class="order-col">
+               <h3>Basic</h3>
+               <p>This plan cost $10 - $25 / hr your website ready max price $2,500 you have to any query just contact support team 24/7 available</p>
+               <a href="{% url 'login' %}">Order Now</a>
+           </div>
+
+           <div class="order-col">
+                <h3>Standard</h3>
+                <p>This plan cost $30 - $50 / hr your website ready max price $5,000 you have to any query just contact support team 24/7 available</p>
+                <a href="{% url 'login' %}">Order Now</a>
+            </div>
+
+            <div class="order-col">
+                <h3>premium</h3>
+                <p>This plan cost $100 - $149 / hr your website ready max price $50,000 you have to any query just contact support team 24/7 available</p>
+                <a href="{% url 'login' %}">Order Now</a>
+            </div>
+       </div>
+
+   </section>
+    
+</body>
+</html>
+
+
+
+  
+
+  
+    
+     
+
+
+
+
+
+{% endblock content %}
