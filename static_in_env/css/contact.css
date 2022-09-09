@@ -1,0 +1,77 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+.contactForm {
+  background: rgb(69, 147, 236);
+  text-align: center;
+  width: 350px;
+  height: 500px;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  outline: none;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px black;
+}
+.contactForm h2 {
+  margin-top: 85px;
+  color: white;
+}
+.contactForm h3 {
+  color: white;
+  margin-bottom: 3%;
+}
+.contactForm .send input {
+  background: transparent;
+  height: 35px;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 2%;
+  border: none;
+  color: black;
+  font-weight: 900;
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+input::placeholder {
+  color: black;
+  font-weight: 300;
+  font-size: 14px;
+}
+textarea::placeholder {
+  color: black;
+  font-weight: 300;
+  font-size: 14px;
+}
+#area {
+  background: transparent;
+  color: black;
+  border: none;
+  border-color: none;
+  font-size: 11px;
+  font-weight: 500;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+.contactForm .send input:focus {
+  outline: none;
+}
+.send button {
+  color: black;
+  background: brown;
+  margin-top: 3%;
+  width: 60%;
+  height: 35px;
+  border-radius: 25px;
+  margin-bottom: 5%;
+}
+.send button:hover {
+  color: white;
+}
+#bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}

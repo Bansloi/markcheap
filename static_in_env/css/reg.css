@@ -1,0 +1,120 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  background: darkgreen;
+}
+.register {
+  background: rgb(69, 147, 236);
+  text-align: center;
+  width: 350px;
+  height: 500px;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+
+  outline: none;
+  border: 1px solid black;
+  box-shadow: 10px 10px 5px black;
+}
+.register h3 {
+  margin-top: 100px;
+  margin-bottom: 10%;
+}
+.register .main input {
+  height: 35px;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 2%;
+  border-radius: 25px;
+}
+.register .main input:focus {
+  outline: none;
+}
+.main button {
+  color: black;
+  background: brown;
+  margin-top: 3%;
+  width: 60%;
+  height: 35px;
+  border-radius: 25px;
+  margin-bottom: 5%;
+}
+.main button:hover {
+  color: white;
+}
+.login .a {
+  text-decoration: none;
+  color: white;
+}
+.login .a:hover {
+  text-decoration: underline;
+  background: none;
+}
+/* this is register page mobile version */
+@media (max-width: 800px) {
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+  body {
+    background: darkgreen;
+  }
+  .register {
+    background: rgb(69, 147, 236);
+    text-align: center;
+    width: 350px;
+    height: 500px;
+    margin: 0 auto;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px black;
+  }
+  .register h3 {
+    margin-top: 100px;
+    margin-bottom: 10%;
+  }
+  .register .main input {
+    height: 35px;
+    width: 70%;
+    text-align: center;
+    margin-bottom: 2%;
+    border-radius: 25px;
+  }
+  .register .main input:focus {
+    outline: none;
+  }
+  .main button {
+    color: black;
+    background: brown;
+    margin-top: 3%;
+    width: 60%;
+    height: 35px;
+    border-radius: 25px;
+    margin-bottom: 5%;
+  }
+  .main button:hover {
+    color: white;
+  }
+  .login .a {
+    text-decoration: none;
+    color: white;
+  }
+  .login .a:hover {
+    text-decoration: underline;
+    background: none;
+  }
+}
+#bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
